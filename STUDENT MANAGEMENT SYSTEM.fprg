@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PAVAN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-28 09:50:06 AM"/>
+        <attribute name="created" value="UEFWQU47Q1VTQ1VUQTsyMDIyLTEwLTI4OzA5OjI1OjQxIEFNOzIxNzc="/>
+        <attribute name="edited" value="UEFWQU47Q1VTQ1VUQTsyMDIyLTEwLTI4OzA5OjUwOjA2IEFNOzI7MjI4NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;STUDENT DETAILS&quot;" newline="True"/>
+            <declare name="NAME" type="String" array="False" size=""/>
+            <output expression="&quot;ENTER YOUR NAME&quot;" newline="True"/>
+            <input variable="NAME"/>
+            <declare name="ROLLNO" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER YOUR ROLLNO&quot;" newline="True"/>
+            <input variable="ROLLNO"/>
+            <declare name="ADDRESS" type="String" array="False" size=""/>
+            <output expression="&quot;ENTER YOUR ADDRESS&quot;" newline="True"/>
+            <input variable="ADDRESS"/>
+            <declare name="BLOODGROUP" type="String" array="False" size=""/>
+            <output expression="&quot;ENTER YOUR BLOOD GROUP&quot;" newline="True"/>
+            <input variable="BLOODGROUP"/>
+            <declare name="PHONENO" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER YOUR PHONENUMBER&quot;" newline="True"/>
+            <input variable="PHONENO"/>
+            <declare name="DEPTASSIGNED" type="String" array="False" size=""/>
+            <output expression="&quot;ENTER THE DEPARTMENTASSIGNED&quot;" newline="True"/>
+            <input variable="DEPTASSIGNED"/>
+            <declare name="NATURE" type="Boolean" array="False" size=""/>
+            <output expression="&quot;ENTER YOUR NATURE&quot;" newline="True"/>
+            <input variable="NATURE"/>
+            <declare name="CRICKETER" type="String" array="False" size=""/>
+            <output expression="&quot;ENTER THE NAME OF YOUR FAVOURITE CRICKETER&quot;" newline="True"/>
+            <input variable="CRICKETER"/>
+        </body>
+    </function>
+</flowgorithm>

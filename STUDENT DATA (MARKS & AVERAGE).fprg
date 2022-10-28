@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PAVAN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-28 10:30:23 AM"/>
+        <attribute name="created" value="UEFWQU47Q1VTQ1VUQTsyMDIyLTEwLTI4OzA5OjI1OjQxIEFNOzIxNzc="/>
+        <attribute name="edited" value="UEFWQU47Q1VTQ1VUQTsyMDIyLTEwLTI4OzEwOjMwOjIzIEFNOzM7MjI3NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="NAME" type="String" array="False" size=""/>
+            <output expression="&quot;ENTER YOUR NAME&quot;" newline="True"/>
+            <input variable="NAME"/>
+            <declare name="ROLLNO" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER YOUR ROLLNO (CB.EN.U4CYS22000)&quot;" newline="True"/>
+            <input variable="ROLLNO"/>
+            <declare name="SEM" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER YOUR SEM NO&quot;" newline="True"/>
+            <input variable="SEM"/>
+            <declare name="SUBJECTCODE1" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER YOUR SUBJECTCODE1&quot;" newline="True"/>
+            <input variable="SUBJECTCODE1"/>
+            <declare name="SUBJECTCODE2" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER YOUR SUBJECTCODE2&quot;" newline="True"/>
+            <input variable="SUBJECTCODE2"/>
+            <declare name="MARKS1" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER YOUR MARKS1&quot;" newline="True"/>
+            <input variable="MARKS1"/>
+            <declare name="MARKS2" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER YOUR MARKS2&quot;" newline="True"/>
+            <input variable="MARKS2"/>
+            <declare name="AVERAGE" type="Integer" array="False" size=""/>
+            <assign variable="AVERAGE" expression="(MARKS1+MARKS2)/2"/>
+            <output expression="AVERAGE" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
