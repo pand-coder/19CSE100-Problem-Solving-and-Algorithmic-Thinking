@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22049"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:57:10 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjA0OTsyMDIyMjNNQVlDMDA4NjsyMDIyLTExLTA0OzEwOjQzOjE4IEFNOzMzMjI="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA0OTsyMDIyMjNNQVlDMDA4NjsyMDIyLTExLTA0OzEwOjU3OjEwIEFNOzE7MzQyNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Main theme of this sequence is to swap the values of declared integers A&amp;B.&#13;&#10;"/>
+            <declare name="A" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the value of A&quot;" newline="True"/>
+            <input variable="A"/>
+            <declare name="B" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the value of B&quot;" newline="True"/>
+            <input variable="B"/>
+            <assign variable="A" expression="A+B"/>
+            <assign variable="B" expression="A-B"/>
+            <output expression="&quot; value of b=&quot;&amp;B" newline="True"/>
+            <assign variable="A" expression="A-B"/>
+            <output expression="&quot;value of a=&quot;&amp;A" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
