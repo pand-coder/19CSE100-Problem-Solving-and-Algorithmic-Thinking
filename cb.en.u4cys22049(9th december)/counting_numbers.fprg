@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PAVAN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 02:52:22 PM"/>
+        <attribute name="created" value="UEFWQU47Q1VTQ1VUQTsyMDIyLTEyLTA5OzEwOjUwOjI5IEFNOzIxNzQ="/>
+        <attribute name="edited" value="UEFWQU47Q1VTQ1VUQTsyMDIyLTEyLTA5OzAyOjUyOjIyIFBNOzU7MjI5Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declare an integer array list from 0 to 10"/>
+            <declare name="LIST" type="Integer" array="True" size="10"/>
+            <comment text="Declare an Integer with Index variable"/>
+            <declare name="Index" type="Integer" array="False" size=""/>
+            <comment text="Using for loop with index variable from 0 to 9"/>
+            <for variable="Index" start="0" end="9" direction="inc" step="1">
+                <comment text="Display the value of the element"/>
+                <output expression="&quot;Enter the value of element &quot;&amp;Index+1&amp;&quot;:&quot;" newline="True"/>
+                <comment text="Input the value the list"/>
+                <input variable="LIST[Index]"/>
+            </for>
+            <comment text="Declare an integer datatype with element variable"/>
+            <declare name="Element" type="Integer" array="False" size=""/>
+            <comment text="Enter the element whose frequency is to be found"/>
+            <output expression="&quot;Enter the element whose frequency is to be found:&quot;" newline="True"/>
+            <comment text="Input the value of the element"/>
+            <input variable="Element"/>
+            <comment text="Declare the integer datatype with counter variable"/>
+            <declare name="Count" type="Integer" array="False" size=""/>
+            <comment text="assign counter variable = 0"/>
+            <assign variable="Count" expression="0"/>
+            <comment text="using for loop with index variable from 0 to 9"/>
+            <for variable="Index" start="0" end="9" direction="inc" step="1">
+                <comment text="using an if statement check whether list[index]=element"/>
+                <if expression="LIST[Index]==Element">
+                    <then>
+                        <comment text="If true assign count=count+1"/>
+                        <assign variable="Count" expression="Count+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <comment text="Display the frequency of the element"/>
+            <output expression="&quot;The frequency of &quot;&amp;Element&amp;&quot; is &quot;&amp;Count&amp;&quot;&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PAVAN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 02:04:47 PM"/>
+        <attribute name="created" value="UEFWQU47Q1VTQ1VUQTsyMDIyLTEyLTA5OzA5OjA5OjIwIEFNOzIxNzc="/>
+        <attribute name="edited" value="UEFWQU47Q1VTQ1VUQTsyMDIyLTEyLTA5OzAyOjA0OjQ3IFBNOzg7MjMwNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declare an array from 0 to 10 "/>
+            <declare name="Arr" type="Integer" array="True" size="10"/>
+            <comment text="Declare an integer index type variable"/>
+            <declare name="Index" type="Integer" array="False" size=""/>
+            <comment text="Using For loop asign values from 0 to 9"/>
+            <for variable="Index" start="0" end="9" direction="inc" step="1">
+                <comment text="Display Enter the value for the element&#13;&#10;"/>
+                <output expression="&quot; Enter the value for element&quot;&amp;Index+1&amp;&quot;&quot;" newline="True"/>
+                <comment text="input Arr[index]"/>
+                <input variable="Arr[Index]"/>
+            </for>
+            <comment text="Diplaying output in the form of an array&#13;&#10;"/>
+            <output expression="&quot;Arr=[&quot;" newline="False"/>
+            <comment text="using for loop with index variable from 0 to 9"/>
+            <for variable="Index" start="0" end="9" direction="inc" step="1">
+                <comment text="Displaying output array with index variable"/>
+                <output expression="&quot;&quot;&amp;Arr[Index]&amp;&quot; ,&quot;" newline="False"/>
+            </for>
+            <comment text="display result &#13;&#10;&#13;&#10;"/>
+            <output expression="&quot;]&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

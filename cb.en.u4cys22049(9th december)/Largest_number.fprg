@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PAVAN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 02:43:32 PM"/>
+        <attribute name="created" value="UEFWQU47Q1VTQ1VUQTsyMDIyLTEyLTA5OzEwOjEzOjAxIEFNOzIxNjM="/>
+        <attribute name="edited" value="UEFWQU47Q1VTQ1VUQTsyMDIyLTEyLTA5OzAyOjQzOjMyIFBNOzk7MjMwMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Find the largest element in an integer array&quot;" newline="True"/>
+            <comment text="Declare an Integer type variable with &quot;n&quot;"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <comment text="Display the total number of elements"/>
+            <output expression="&quot;Enter the number of elements:&quot;" newline="True"/>
+            <comment text="Input the value of n"/>
+            <input variable="n"/>
+            <comment text="Use if statement to check whether entered value of n is a positive number or negative number&#13;&#10;"/>
+            <if expression="n&gt;0">
+                <then>
+                    <comment text="Declare an integer datatype with index variable "/>
+                    <declare name="Index" type="Integer" array="False" size=""/>
+                    <comment text="Declare an Integer array type "/>
+                    <declare name="Array" type="Integer" array="True" size="n"/>
+                    <comment text="use for loop with index variable from 0 to n-1"/>
+                    <for variable="Index" start="0" end="n-1" direction="inc" step="1">
+                        <comment text="Display the value for the element "/>
+                        <output expression="&quot;Enter the value for element &quot;&amp;Index&amp;&quot; :&quot;" newline="True"/>
+                        <comment text="Input the Array with index"/>
+                        <input variable="Array[Index]"/>
+                    </for>
+                    <comment text="Declare an integer datatype with Greater variable name"/>
+                    <declare name="Greater" type="Integer" array="False" size=""/>
+                    <comment text="Declare an integer datatype with Temp variable name"/>
+                    <comment text="Temp=Temporary"/>
+                    <declare name="Temp" type="Integer" array="False" size=""/>
+                    <comment text="Assign Greater=Array[0]"/>
+                    <assign variable="Greater" expression="Array[0]"/>
+                    <comment text="using for loop with index variable from 1 to n-1"/>
+                    <for variable="Index" start="1" end="n-1" direction="inc" step="1">
+                        <comment text="Assign Temp=Array"/>
+                        <assign variable="Temp" expression="Array[Index]"/>
+                        <comment text="Using if sattement check whether Temp is greater than Greater"/>
+                        <if expression="Temp&gt;Greater">
+                            <then>
+                                <comment text="Declare an integer datatype with C variable"/>
+                                <declare name="C" type="Integer" array="False" size=""/>
+                                <comment text="Assign C=Greater"/>
+                                <assign variable="C" expression="Greater"/>
+                                <comment text="Assign Greater=temp"/>
+                                <assign variable="Greater" expression="Temp"/>
+                                <comment text="Assign Temp=C"/>
+                                <assign variable="Temp" expression="C"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </for>
+                    <comment text="Display the Greatest number "/>
+                    <output expression="&quot;The largest number is &quot;&amp;Greater&amp;&quot;&quot;" newline="True"/>
+                </then>
+                <else>
+                    <comment text="&quot;Enter a positive number&quot;&#13;&#10;"/>
+                    <output expression="&quot;Enter a positive number&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PAVAN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 02:25:11 PM"/>
+        <attribute name="created" value="UEFWQU47Q1VTQ1VUQTsyMDIyLTEyLTA5OzA5OjIzOjQxIEFNOzIxNzY="/>
+        <attribute name="edited" value="UEFWQU47Q1VTQ1VUQTsyMDIyLTEyLTA5OzAyOjI1OjExIFBNOzEwOzIzMzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declare an integer type variable with &quot;n&quot;"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <comment text="Display the value of number of students"/>
+            <output expression="&quot;Enter the value of number of students&quot;" newline="True"/>
+            <comment text="Input the value of n"/>
+            <input variable="n"/>
+            <comment text="Use an if statement to see that the value of &quot;n&quot; is negative or positive "/>
+            <if expression="n&lt;0">
+                <then>
+                    <comment text="When n&lt;0 then it's a negative number so enter a valid number "/>
+                    <output expression="&quot;Enter a valid number which is positive&quot;" newline="True"/>
+                </then>
+                <else>
+                    <comment text="Declare integer type Array variable for marks of 5 subjects"/>
+                    <declare name="mark1" type="Integer" array="True" size="n"/>
+                    <declare name="mark2" type="Integer" array="True" size="n"/>
+                    <declare name="mark3" type="Integer" array="True" size="n"/>
+                    <declare name="mark4" type="Integer" array="True" size="n"/>
+                    <declare name="mark5" type="Integer" array="True" size="n"/>
+                    <comment text="Declare an integer Array type variable for totalling the value of marks of all 5 subjects."/>
+                    <declare name="total" type="Integer" array="True" size="n"/>
+                    <comment text="Declare an integer Array type variable for averaging the total"/>
+                    <declare name="Average" type="Integer" array="True" size="n"/>
+                    <comment text="Declare an integer Array type variable for rollnumber"/>
+                    <declare name="rollno" type="Integer" array="True" size="n"/>
+                    <comment text="Declare an integertype variable with name &quot;Index&quot;"/>
+                    <declare name="Index" type="Integer" array="False" size=""/>
+                    <comment text="Use for loop with index variable name from 0 to n-1"/>
+                    <for variable="Index" start="0" end="n-1" direction="inc" step="1">
+                        <comment text="Enter the value of the rollnumber oif the student "/>
+                        <output expression="&quot;Enter the value of rollno of student&quot;&amp;Index+1&amp;&quot;&quot;" newline="True"/>
+                        <comment text="Input the rollnumber with index"/>
+                        <input variable="rollno[Index]"/>
+                        <comment text="enter the value of mark1"/>
+                        <output expression="&quot;Enter the value of mark1 of student&quot;&amp;Index+1&amp;&quot;&quot;" newline="True"/>
+                        <comment text="Input the value of mark1"/>
+                        <input variable="mark1[Index]"/>
+                        <comment text="enter the value of mark2"/>
+                        <output expression="&quot;Enter the value of mark2 of student&quot;&amp;Index+1&amp;&quot;&quot;" newline="True"/>
+                        <comment text="Input the value of mark2 index"/>
+                        <input variable="mark2[Index]"/>
+                        <comment text="enter the value of mark3"/>
+                        <output expression="&quot;Enter the value of mark3 of student&quot;&amp;Index+1&amp;&quot;&quot;" newline="True"/>
+                        <comment text="Input the value of mark3 index"/>
+                        <input variable="mark3[Index]"/>
+                        <comment text="enter the value of mark4"/>
+                        <output expression="&quot;Enter the value of mark4 of student&quot;&amp;Index+1&amp;&quot;&quot;" newline="True"/>
+                        <comment text="Input the value of mark4 index"/>
+                        <input variable="mark4[Index]"/>
+                        <comment text="enter the value of mark5"/>
+                        <output expression="&quot;Enter the value of mark5 of student&quot;&amp;Index+1&amp;&quot;&quot;" newline="True"/>
+                        <comment text="Input the value of mark5 index"/>
+                        <input variable="mark5[Index]"/>
+                    </for>
+                    <comment text="Use for loop with Index variable from 0 to n-1"/>
+                    <for variable="Index" start="0" end="n-1" direction="inc" step="1">
+                        <comment text="assign the formula of total = mark(1+2+3+4+5)"/>
+                        <assign variable="total[Index]" expression="mark1[Index]+mark2[Index]+mark3[Index]+mark4[Index]+mark5[Index]"/>
+                        <comment text="assign the formula avg=total/5"/>
+                        <assign variable="average[Index]" expression="total[Index]/5"/>
+                    </for>
+                    <comment text="Using For loop with Index variable from 0 to n-1"/>
+                    <for variable="Index" start="0" end="n-1" direction="inc" step="1">
+                        <comment text="display rollnumber"/>
+                        <output expression="&quot;Rollno:&quot;&amp;rollno[Index]&amp;&quot;&quot;" newline="True"/>
+                        <comment text="displaying {mark1,mark2,mark3,mark4,mark5] in an order"/>
+                        <output expression="&quot;MARKS: &quot;" newline="False"/>
+                        <output expression="&quot;&quot;&amp;mark1[Index]&amp;&quot; ,&quot;" newline="False"/>
+                        <output expression="&quot;&quot;&amp;mark2[Index]&amp;&quot; ,&quot;" newline="False"/>
+                        <output expression="&quot;&quot;&amp;mark3[Index]&amp;&quot; ,&quot;" newline="False"/>
+                        <output expression="&quot;&quot;&amp;mark4[Index]&amp;&quot; ,&quot;" newline="False"/>
+                        <output expression="mark5[Index]" newline="True"/>
+                        <comment text="Displaying toatal after marks"/>
+                        <output expression="&quot;total:&quot;&amp;total[Index]&amp;&quot;&quot;" newline="True"/>
+                        <comment text="Displaying avg atlast after every detail about in marks system"/>
+                        <output expression="&quot;average:&quot;&amp;average[Index]&amp;&quot;&quot;" newline="True"/>
+                    </for>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
