@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22049"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 11:09:35 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA0OTsyMDIyMjNNQVlDMDA4NjsyMDIzLTAxLTIwOzA5OjA3OjAyIEFNOzMwNjU="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0OTsyMDIyMjNNQVlDMDA4NjsyMDIzLTAxLTIwOzExOjA5OjM1IEFNOzU7MzE3OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="s, t" type="Integer" array="False" size=""/>
+            <declare name="i, j" type="Integer" array="False" size=""/>
+            <comment text="Numbers of values to be kept in the series "/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the value of numbers in series&quot;" newline="True"/>
+            <input variable="n"/>
+            <comment text="array of numbers containing all values"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <comment text="for computing the numbers of value"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Enter the value of the number&quot;" newline="True"/>
+                <input variable="a[i]"/>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <for variable="j" start="0" end="n-1" direction="inc" step="1">
+                    <comment text="computing the values of s and t withe th elements of array s and values of numbers where j is a sub -loop inside were processsing is done "/>
+                    <assign variable="s" expression="a[i]"/>
+                    <assign variable="t" expression="a[j]"/>
+                    <comment text="condition for ascending to descending order of elements in array"/>
+                    <if expression="a[j]&gt;a[i]">
+                        <then>
+                            <comment text="swapping of numbers"/>
+                            <assign variable="a[i]" expression="t"/>
+                            <assign variable="a[j]" expression="s"/>
+                            <comment text="for reverse just change the condition"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <comment text="output of the processed elemts in the array through for loop accordingly"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="a[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
